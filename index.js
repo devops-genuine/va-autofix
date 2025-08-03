@@ -1,7 +1,11 @@
 const _ = require('lodash');
 
-const data = { user: { name: "Jesada" } };
-const cloned = _.cloneDeep(data);
+function mergeUserOptions(userInput) {
+  return _.merge({}, userInput);
+}
 
-console.log("Cloned:", cloned);
- 
+// User-controlled input
+const userInput = JSON.parse('{"__proto__": {"admin": true}}');
+const result = mergeUserOptions(userInput);
+
+console.log(result);
