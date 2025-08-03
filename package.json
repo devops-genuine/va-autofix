@@ -1,13 +1,11 @@
 {
-  "name": "vault-connector-for-nodejs",
+  "name": "codeql-nodejs-demo",
   "version": "1.0.0",
-  "description": "to connect to vault managed service",
-  "main": "connector.js",
-  "scripts": {
-    "test": "node test"
-  },
+  "main": "index.js",
   "dependencies": {
-    "request": "1.2.0",
-    "lodash": "^4.17.15"
+    "lodash": "4.17.15"  // Vulnerable version
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
