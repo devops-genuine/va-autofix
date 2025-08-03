@@ -1,11 +1,14 @@
 {
-  "name": "codeql-nodejs-demo",
+  "name": "vulnerable-node-demo",
   "version": "1.0.0",
+  "description": "A Node.js app with known vulnerable packages for testing CodeQL and npm audit.",
   "main": "index.js",
-  "dependencies": {
-    "lodash": "4.17.15"
-  },
   "scripts": {
     "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "lodash": "4.17.15",
+    "request": "2.88.1"
   }
 }
