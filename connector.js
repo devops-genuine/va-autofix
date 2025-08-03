@@ -1,6 +1,5 @@
 var fs = require('fs');
 var request = require('request');
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 process.env.VAULT_SKIP_VERIFY=true;
 var saToken = "";
 var saTokenFile = "";
@@ -102,7 +101,7 @@ async function getSecrets(vaultURL,vaultAcesssToken,vaultSecretMountpointPath){
 		url: vaultURL+vaultSecretMountpointPath,
 		method: 'GET',
 		followAllRedirects: true,
-		insecure: true,
+		strictSSL: true,
 		headers:{
 		  'Content-Type': 'application/json',
 		  'X-Vault-Token': vaultAcesssToken
