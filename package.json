@@ -1,0 +1,12 @@
+{
+  "name": "vault-connector-for-nodejs",
+  "version": "1.0.0",
+  "description": "to connect to vault managed service",
+  "main": "connector.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "dependencies": {
+    "request": "1.2.0"
+  }
+}
